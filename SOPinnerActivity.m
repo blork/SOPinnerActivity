@@ -59,7 +59,7 @@ NSString *const SOPinnerToReadParameterKey = @"toread";
 {
     BOOL didFinish = NO;
         
-    NSMutableString *pinnerURLString = [NSMutableString stringWithFormat:@"pinner:///bookmark?href=%@", [self.activityURL absoluteString]];
+    NSMutableString *pinnerURLString = [NSMutableString stringWithFormat:@"pinner://bookmark?href=%@", [self.activityURL absoluteString]];
     NSMutableArray *pathComponents = [NSMutableArray array];
     
     for (NSString *key in self.bookmarkParameters) {
