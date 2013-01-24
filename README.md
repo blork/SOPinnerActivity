@@ -1,13 +1,33 @@
 # SOPinnerActivity
 `SOPinnerActivity` is a `UIActivity` subclass to save bookmarks to Pinner which are then uploaded to the user's Pinboard.in account.
 
+##URL Scheme
+To add a bookmark to Pinner without including the UIActivity subclass, use the following URL scheme:
+
+	pinner://bookmark
+	
+with the parameters:
+
+	href (required)
+	title
+	tags
+	extended
+	shared
+	toread
+
+
 ## Acknowledgements
 Inspired by [ALBPinbookActivity](https://github.com/collindonnell/ALBPinbookActivity), a similar UIActivity used for the [Pinbook](http://albinadevelopment.com/page3) app.
 
 ## Adding to a Project
 Add the following files to your project:
 
-* SOPinnerActivity.h* SOPinnerActivity.m* SOPinnerActivityMask.png* SOPinnerActivityMask@2x.png* SOPinnerActivityMask~ipad.png* SOPinnerActivityMask~ipad@2x.png
+* SOPinnerActivity.h
+* SOPinnerActivity.m
+* SOPinnerActivityMask.png
+* SOPinnerActivityMask@2x.png
+* SOPinnerActivityMask~ipad.png
+* SOPinnerActivityMask~ipad@2x.png
 
 ## Usage
 Create a new `SOPinnerActivity` object and provide it as one of the `applicationActivities` when instantiating `UIActivityViewController`. The activity will only appear if the user has the Pinner app installed and if at least one of the `ActivityItems` provided to `UIActivityViewController` is a URL.
